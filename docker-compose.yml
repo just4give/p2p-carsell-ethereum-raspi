@@ -1,0 +1,20 @@
+version: '3'
+services:
+  p2pcarsell:
+    build:
+      context: .
+      dockerfile: ./p2p-carsell-web/Dockerfile
+    ports:
+        - "4200:4200"
+  blockexplorer:
+    build:
+      context: .
+      dockerfile: ./block-explorer/Dockerfile_explorer
+    ports:
+        - "8000:8000"
+  testrpc:
+    build:
+      context: .
+      dockerfile: ./p2p-carsell-web/Dockerfile_testrpc
+    ports:
+      - "8545:8545"

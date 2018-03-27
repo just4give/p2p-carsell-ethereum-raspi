@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  background-color: #062738;
+  color: white;
+  font-family: 'Play', sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.qrcode img{
+  width: 300px;
+}
+
+.for-sale{
+  background-color: green;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sold-out{
+  background-color: red;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sale-price{
+  font-size: 40px;
+  color: #f0ad4e;
+}

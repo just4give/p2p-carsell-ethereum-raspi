@@ -1,0 +1,80 @@
+<div class="container">
+
+  <div class="row" >
+    <label>Select Buyer Account</label>
+    <select name="account-dropdown" [(ngModel)]="selectedAccount" title="Select"
+            (ngModelChange)="selectAccount(selectedAccount)"
+            class="form-control" style="background-color: #5cb85c; color: white">
+      <option value="" disabled selected>Select</option>
+      <option [value]="account" *ngFor="let account of accounts">{{account}}</option>
+    </select>
+  </div>
+  <h4 style="margin-bottom: 20px;color: #f0ad4e;">Account Balance {{balance}} ETH</h4>
+  <div class="row " *ngIf="selectedAccount">
+    <div class="input-group">
+      <input type="text" class="form-control" [(ngModel)]="contractAddress" placeholder="Paste contract address">
+      <span class="input-group-btn">
+        <button class="btn btn-warning" type="button" (click)="search()">Search</button>
+      </span>
+    </div>
+
+  </div>
+
+  <div class="row" style="margin-top: 20px"  *ngIf="selectedAccount">
+    <div class="col-xs-6">
+      <table border="0" *ngIf="car" class="table">
+        <tr>
+          <td>Make:</td>
+          <td>{{car.make}}</td>
+        </tr>
+        <tr>
+          <td>Model:</td>
+          <td>{{car.model}}</td>
+        </tr>
+        <tr>
+          <td>Year:</td>
+          <td>{{car.year}}</td>
+        </tr>
+        <tr>
+          <td>Price:</td>
+          <td class="sale-price">{{car.price}} ETH</td>
+        </tr>
+        <tr>
+          <td>Seller</td>
+          <td style="font-size: 10px;">{{car.seller}} </td>
+        </tr>
+
+        <tr *ngIf="car.sold">
+          <td>Buyer</td>
+          <td style="font-size: 10px;">{{car.buyer}} </td>
+        </tr>
+        <tr>
+        <tr>
+
+          <td>Status:</td>
+          <td *ngIf="car.sold" class="sold-out">Sold</td>
+          <td *ngIf="!car.sold" class="for-sale">On Sale</td>
+
+        </tr>
+        <tr  *ngIf="!car.sold">
+          <td></td>
+          <td class="text-right"><button class="btn btn-warning" (click)="buy()">Buy</button></td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div class="col-xs-6">
+      <div *ngIf="ownershipQrCode">
+
+        <ngx-qrcode
+          [qrc-value] = "ownershipQrCode"
+          qrc-class = "qrcode"
+          qrc-errorCorrectionLevel = "L">
+        </ngx-qrcode>
+        <h4 style="font-size: 10px;">{{ownershipQrCode}}</h4>
+      </div>
+    </div>
+  </div>
+
+</div>

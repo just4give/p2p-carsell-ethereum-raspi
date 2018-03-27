@@ -1,0 +1,14 @@
+## Build
+FROM node:6.9
+WORKDIR /work
+COPY ./block-explorer/app app
+COPY ./block-explorer/.bowerrc .bowerrc
+COPY ./block-explorer/package.json package.json
+COPY ./block-explorer/bower.json bower.json
+
+RUN npm install && npm install http-server bower -g
+
+
+
+EXPOSE 8000
+ENTRYPOINT ["http-server","./app","-p","8000","-a","0.0.0.0"]

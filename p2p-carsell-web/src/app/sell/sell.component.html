@@ -1,0 +1,47 @@
+<div class="container text-center">
+  <p >Put your car details and create blockchain contract</p>
+  <div class="row" style="margin-bottom: 20px">
+    <label>Select Seller Account</label>
+    <select name="account-dropdown" [(ngModel)]="selectedAccount"  title="Select" class="form-control" style="background-color: #5cb85c; color: white">
+      <option value="" disabled selected>Select</option>
+      <option [value]="account" *ngFor="let account of accounts">{{account}}</option>
+    </select>
+  </div>
+  <div class="row" *ngIf="selectedAccount">
+    <div class="col-xs-6">
+      <form class="form-horizontal">
+         <div class="form-group">
+           <input type="text" class="form-control" placeholder="Make of your car" name="make" [(ngModel)]="newContract.make">
+         </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Model of your car" name="model" [(ngModel)]="newContract.model">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Year of your car" name="year" [(ngModel)]="newContract.year">
+        </div>
+        <div class="form-group">
+          <input type="number" class="form-control" placeholder="Price for your car (ETH)" name="price" [(ngModel)]="newContract.price">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-info btn-block" (click)="createContract(newContract)">Create Contract</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-6">
+      <div *ngIf="contractAddress">
+
+        <ngx-qrcode
+          [qrc-value] = "contractAddress"
+          qrc-class = "qrcode"
+          qrc-errorCorrectionLevel = "L">
+        </ngx-qrcode>
+
+        <h4>{{contractAddress}}</h4>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

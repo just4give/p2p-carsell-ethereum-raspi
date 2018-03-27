@@ -1,0 +1,7 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+block-explorer/node_modules/**
+block-explorer/app/bower_components/**
+
+p2p-carsell-web/node_modules/**
+p2p-carsell-web/dist/**
