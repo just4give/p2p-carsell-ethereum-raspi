@@ -8,9 +8,13 @@ body{
   padding-right: 20px;
   padding-bottom: 20px;
 }
-
+.qrcode{
+  padding: 100px;
+  background-color: white;
+  text-align: center;
+}
 .qrcode img{
-  width: 300px;
+  width: 150px;
 }
 
 .for-sale{

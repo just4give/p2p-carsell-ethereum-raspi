@@ -1,4 +1,4 @@
 FROM node:6.9
-RUN npm install -g ethereumjs-testrpc
+RUN npm install -g ganache-cli
 EXPOSE 8545
-ENTRYPOINT [ "testrpc" ]
+ENTRYPOINT [ "ganache-cli" ]
