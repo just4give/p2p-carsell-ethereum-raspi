@@ -33,4 +33,9 @@ Note the local tunnerl url which you need to start Raspberry Pi program ( https:
 $ Ctrl+C
 $ docker-compose down
 ```
+## Dependency
+This project has a dependency on Rasberry Pi program. Checkout the repo below for details
 
+ https://github.com/just4give/p2p-carsell-raspi.git
+ 
+ 
