@@ -27,3 +27,10 @@ lt --port 8545
 ![alt tag](https://user-images.githubusercontent.com/9275193/38164396-d0a7a9c0-34d1-11e8-9af7-cc2b73f91c15.png)
 
 Note the local tunnerl url which you need to start Raspberry Pi program ( https://github.com/just4give/p2p-carsell-raspi.git)
+
+## Tear down services
+```
+$ Ctrl+C
+$ docker-compose down
+```
+
