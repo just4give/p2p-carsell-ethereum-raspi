@@ -29,6 +29,7 @@
     "ngx-qrcode2": "0.0.5",
     "ngx-toastr": "6.4.1-beta.0",
     "rxjs": "^5.4.2",
+    "ssri": "^5.2.2",
     "truffle-contract": "^1.1.6",
     "web3": "^0.20.0",
     "zone.js": "^0.8.14"
