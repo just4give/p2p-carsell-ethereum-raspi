@@ -3,6 +3,9 @@ Angular Web application using Ethereum smart contract with Raspberry Pi and AWS
 
 ![alt tag](https://user-images.githubusercontent.com/9275193/38164409-438fe77c-34d2-11e8-9123-2be73aa08700.png)
 
+### Watch the Demo Video on youtube
+[![Alt text for your video](https://img.youtube.com/vi/7qxk9pU0X3s/0.jpg)](http://www.youtube.com/watch?v=7qxk9pU0X3s)
+
 ### Prerequisites 
 
 - Docker version 17.06.1-ce or higher 
